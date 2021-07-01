@@ -1,25 +1,17 @@
-import { FC } from 'react';
-import logo from './logo.svg';
+import { VFC } from 'react';
+
+import CounterBoard from './containers/organisms/CounterBoard';
+import ColorfulBeads from './containers/molecules/ColorfulBeads';
+
 import './App.css';
 
-const App: FC = () => (
-  <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Edit
-        <code>src/App.tsx</code>
-        and save to reload.
-      </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
+const App: VFC = () => (
+  <div className="container">
+    <header>
+      <h1>ビーズカウンター</h1>
     </header>
+    <CounterBoard />
+    <ColorfulBeads />
   </div>
 );
 
